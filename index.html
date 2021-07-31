@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starbucks Website Landing Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <section>
+         <div class="circle"></div>
+       <header>
+    <a href="#"><img src="./images/logo.png" class="logo" alt=""></a>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <ul class="navigation"></ul>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">What's New</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul> 
+    </header>
+    <div class="content">
+        <div class="textBox">
+            <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+          Aliquam ad voluptatem pariatur facere unde ratione voluptatibus obcaecati aspernatur 
+          illo accusamus fugiat rerum nulla neque ipsam ipsa in esse quae officiis!</p>
+          <a href="#">Learn More</a>
+         </div>
+         <div class="imgBox">
+            <img src="./images/img1.png" class="starbucks">
+           
+        </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="./images/thumb1.png" onclick="imgSlider('./images/img1.png');changeCircleColor('#017143')"></li>
+        <li><img src="./images/thumb2.png" onclick="imgSlider('./images/img2.png');changeCircleColor('#eb7495')"></li>
+        <li><img src="./images/thumb3.png" onclick="imgSlider('./images/img3.png');changeCircleColor('#d752b1')"></li>
+    </ul>
+    <ul class="sci">
+        <li><a href="#"><img src="./images/facebook.png"></a></li>
+        <li><a href="#"><img src="./images/twitter.png"></a></li>
+        <li><a href="#"><img src="./images/instagram.png"></a></li>    
+    </ul>    
+    </section>
+    <script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.starbucks') .src = anything;
+    }
+     function changeCircleColor(color){
+         const circle = document.querySelector('.circle');
+         circle.style.background = color;
+     }
+     function toggleMenu(){
+         var menuToggle = document.querySelector('.toggle');
+         var navigation = document.querySelector('.navigation');
+         menuToggle.classList.toggle('active')
+         navigation.classList.toggle('.active')
+     }
+    </script>
+    <!-- New Arrivals -->
+    <div class="container">
+        <h2>New Arrivals</h2>
+        <div class="row">
+
+        <div class="col-md-3">
+        <div class="product-top">
+        <img src="./images/img4.jfif" width="300px">
+        <div class="overlay">
+        </div>
+        </div>
+        <div class="product-bottom text-center">
+            <h3>Matcha White Frappcucino</h3>
+        </div>  
+        </div>
+        <div class="col-md-3">
+            <div class="product-top">
+            <img src="./images/img6.jfif" width="300px" >
+            <div class="overlay">
+            </div>
+            </div> 
+            <div class="product-bottom text-center">
+                <h3>Strawberry Frappcucino</h3>
+            </div>   
+            </div>
+            <div class="col-md-3">
+                <div class="product-top">
+                <img src="./images/img5.1.jfif" width="300px" he>
+                <div class="overlay">
+                </div>
+            </div>
+                <div class="product-bottom text-center">
+                    <h3>Apricot Honey Soy</h3>
+                </div>  
+                </div>
+                <div class="col-md-3">
+                    <div class="product-top">
+                    <img src="./images/img7.jfif" width="300px">
+                    <div class="overlay">
+                    </div>
+                    </div>
+                    <div class="product-bottom text-center">
+                        <h3>Chunky Cookie Frappcucino</h3>  
+                    </div>       
+                    </div>
+        </div>
+    </div>
+    <!-- Contact Us -->
+        <div class="container_1">
+            <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+            <h4>Contact Us</h4>
+            <input type="name" class="field" placeholder="Your Name">
+            <input type="email" class="field" placeholder="Your Email">
+            <input type="phone" class="field" placeholder="Your Phone">
+            <textarea class="field area" placeholder="Message"></textarea>
+            <button class="btn">Send</button>
+            </div>
+           
+           </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container_2">
+            <div class="row_2">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">Cafe</a></li>
+                        <li><a href="#">Coffee & Food</a></li>
+                        <li><a href="#">Starbuck Store</a></li>
+        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+</body>
+</html>
